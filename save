@@ -1,0 +1,6 @@
++ jsonwebtoken@8.3.0
+added 13 packages from 9 contributors in 14.319s
+[!] 15 vulnerabilities found [1730 packages audited]
+    Severity: 4 Low | 9 Moderate | 2 High
+    Run `npm audit` for more detail
+
