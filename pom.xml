@@ -15,18 +15,6 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
-  <distributionManagement>
-    <repository>
-        <id>releases</id>
-        <name>PC313103-releases</name>
-        <url>http://localhost:8040/artifactory/webapp/#/artifacts/browse/tree/General/mavenrepo</url>
-    </repository>
-    <snapshotRepository>
-        <id>snapshots</id>
-        <name>PC313103-snapshots</name>
-        <url>http://localhost:8040/artifactory/webapp/#/artifacts/browse/tree/General/mavenrepo</url>
-    </snapshotRepository>
-  </distributionManagement>
   <build>
     <plugins>
       <plugin>
@@ -36,6 +24,30 @@
         <configuration>
           <failOnMissingWebXml>false</failOnMissingWebXml>
         </configuration>
+      </plugin>
+      plugins>
+      <plugin>
+        <groupId>org.jfrog.buildinfo</groupId>
+        <artifactId>artifactory-maven-plugin</artifactId>
+        <version>2.6.1</version>
+        <inherited>flase</inherited>
+        <executions>
+          <execution>
+            <id>build-info</id>
+              <goals>
+                <goal>publish</goal>
+              </goals>
+              <configuration>
+                <publisher>
+                  <contextUrl>http://localhost:8040/artifactory/webapp/#/artifacts/browse/tree/General/mavenrepo</contextUrl>
+                  <username>admin</username>
+                  <password>password/password>
+                  <repoKey>libs-release-local</repoKey>
+                  <snapshotRepoKey>libs-snapshot-local</snapshotRepoKey>
+                 </publisher>
+                </configuration>
+          </execution>
+         </executions>
       </plugin>
     </plugins>      
   </build>
