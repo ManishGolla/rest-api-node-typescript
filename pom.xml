@@ -15,6 +15,18 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+  <distributionManagement>
+    <repository>
+        <id>central</id>
+        <name>PC313103-releases</name>
+        <url>http://localhost:8040/artifactory/mavenrepo</url>
+    </repository>
+    <snapshotRepository>
+        <id>snapshots</id>
+        <name>PC313103-snapshots</name>
+        <url>http://localhost:8040/artifactory/mavenrepo</url>
+    </snapshotRepository>
+  </distributionManagement>
   <build>
     <plugins>
       <plugin>
