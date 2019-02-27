@@ -4,7 +4,7 @@
   <groupId>com.ofs</groupId>
   <artifactId>rest-api-node-typescript</artifactId>
   <packaging>war</packaging>
-  <version>3.0.5</version>
+  <version>${Version}</version>
   <name>rest-api-node-typescript</name>
   <url>http://maven.apache.org</url>
   <dependencies>
